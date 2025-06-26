@@ -12,11 +12,13 @@
     <title>Actividad 3</title>
 
     <style>
+        body {
+
+            background-color: #252627;
+        }
+
         #boton {
             color: white;
-        }
-        #parrafo {
-            font-size: 24px;
         }
     </style>
 </head>
@@ -24,140 +26,178 @@
 <body>
 
 
-    <div class="text-center">
-        <button id="boton" onclick="mostrar()" class="btn btn-info">----</button>
-        <p id="parrafo">Toque el boton</p>
-    </div>
+    <header class="bg-success">
+        <h1 class="text-center text-light  pt-5 mb-4"> Procesos organizacionales</h1>
 
-
-
-    <div id="caja" class="container my-5">
+    </header>
 
 
 
 
-    </div>
+
+    <main>
+        <section>
+
+            <div class="text-center row">
+
+                <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <button id="boton" onclick="mostrar_pasos_compra()" class="btn btn-success">Compra-Pago</button>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <button id="boton_venta_cobranza" onclick="mostrar_pasos_venta()" class="btn btn-success ">Venta-Cobranza</button>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <button id="boton_comparativo" onclick="mostrar_cuadro_comparativo()" class="btn btn-success ">cuadro comparativo</button>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+            <div id="caja" class="container my-5">
+
+
+
+
+                <div class="row">
+                    <div id="compra" class="col-md-6 d-none">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-primary text-white">
+                                Pasos del Ciclo Compra-Pago
+                            </div>
+                            <div class="card-body">
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item">Identificación de la necesidad</li>
+                                    <li class="list-group-item">Selección de proveedores</li>
+                                    <li class="list-group-item">Solicitud de cotización o pedido de compra</li>
+                                    <li class="list-group-item">Recepción de la mercadería o servicio</li>
+                                    <li class="list-group-item">Verificación y registro</li>
+                                    <li class="list-group-item">Recepción de la factura</li>
+                                    <li class="list-group-item">Autorización de pago</li>
+                                    <li class="list-group-item">Realización del pago</li>
+                                    <li class="list-group-item">Registro contable del pago</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="venta" class="col-md-6 d-none">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-success text-white">
+                                Pasos del Ciclo Venta-Cobranza
+                            </div>
+                            <div class="card-body">
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item">Recepción del pedido del cliente</li>
+                                    <li class="list-group-item">Revisión del pedido y condiciones</li>
+                                    <li class="list-group-item">Preparación y entrega del producto o servicio</li>
+                                    <li class="list-group-item">Emisión de la factura</li>
+                                    <li class="list-group-item">Registro contable de la venta</li>
+                                    <li class="list-group-item">Seguimiento del cobro</li>
+                                    <li class="list-group-item">Recepción del pago</li>
+                                    <li class="list-group-item">Registro del cobro</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cuadro_comparativo" class="card shadow-sm d-none">
+                    <div class="card-header bg-dark text-white">
+                        Cuadro Comparativo
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="table-secondary">
+                                    <tr>
+                                        <th>Aspecto</th>
+                                        <th>Compra-Pago</th>
+                                        <th>Venta-Cobranza</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Inicio del ciclo</td>
+                                        <td>Necesidad interna de bienes o servicios</td>
+                                        <td>Pedido del cliente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Intervención principal</td>
+                                        <td>Proveedor</td>
+                                        <td>Cliente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Documento clave inicial</td>
+                                        <td>Pedido de compra</td>
+                                        <td>Pedido del cliente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Entrega de bienes/servicios</td>
+                                        <td>Por parte del proveedor</td>
+                                        <td>Por parte de la empresa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Documento de respaldo</td>
+                                        <td>Factura de proveedor</td>
+                                        <td>Factura de venta</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cierre del ciclo</td>
+                                        <td>Pago al proveedor</td>
+                                        <td>Cobro al cliente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Objetivo final</td>
+                                        <td>Obtener insumos/servicios para operar</td>
+                                        <td>Obtener ingresos por la venta</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Control interno</td>
+                                        <td>Autorización de compra y pago</td>
+                                        <td>Aprobación de crédito y seguimiento de cobro</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+
+
 
 </body>
 <script>
 
-    function mostrar() {
-        let parrafo = document.getElementById("parrafo");
-        parrafo.remove();
+    function mostrar_pasos_compra() {
 
-        let caja = document.getElementById("caja");
-        caja.innerHTML = `
-        <h1 class="text-center mb-4" > Ciclos Compra - Pago y Venta - Cobranza</h1>
+        let compra = document.getElementById("compra");
+        compra.classList.toggle("d-none");
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-primary text-white">
-                        Pasos del Ciclo Compra-Pago
-                    </div>
-                    <div class="card-body">
-                        <ol class="list-group list-group-numbered">
-                            <li class="list-group-item">Identificación de la necesidad</li>
-                            <li class="list-group-item">Selección de proveedores</li>
-                            <li class="list-group-item">Solicitud de cotización o pedido de compra</li>
-                            <li class="list-group-item">Recepción de la mercadería o servicio</li>
-                            <li class="list-group-item">Verificación y registro</li>
-                            <li class="list-group-item">Recepción de la factura</li>
-                            <li class="list-group-item">Autorización de pago</li>
-                            <li class="list-group-item">Realización del pago</li>
-                            <li class="list-group-item">Registro contable del pago</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-success text-white">
-                        Pasos del Ciclo Venta-Cobranza
-                    </div>
-                    <div class="card-body">
-                        <ol class="list-group list-group-numbered">
-                            <li class="list-group-item">Recepción del pedido del cliente</li>
-                            <li class="list-group-item">Revisión del pedido y condiciones</li>
-                            <li class="list-group-item">Preparación y entrega del producto o servicio</li>
-                            <li class="list-group-item">Emisión de la factura</li>
-                            <li class="list-group-item">Registro contable de la venta</li>
-                            <li class="list-group-item">Seguimiento del cobro</li>
-                            <li class="list-group-item">Recepción del pago</li>
-                            <li class="list-group-item">Registro del cobro</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card shadow-sm">
-            <div class="card-header bg-dark text-white">
-                Cuadro Comparativo
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead class="table-secondary">
-                            <tr>
-                                <th>Aspecto</th>
-                                <th>Compra-Pago</th>
-                                <th>Venta-Cobranza</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Inicio del ciclo</td>
-                                <td>Necesidad interna de bienes o servicios</td>
-                                <td>Pedido del cliente</td>
-                            </tr>
-                            <tr>
-                                <td>Intervención principal</td>
-                                <td>Proveedor</td>
-                                <td>Cliente</td>
-                            </tr>
-                            <tr>
-                                <td>Documento clave inicial</td>
-                                <td>Pedido de compra</td>
-                                <td>Pedido del cliente</td>
-                            </tr>
-                            <tr>
-                                <td>Entrega de bienes/servicios</td>
-                                <td>Por parte del proveedor</td>
-                                <td>Por parte de la empresa</td>
-                            </tr>
-                            <tr>
-                                <td>Documento de respaldo</td>
-                                <td>Factura de proveedor</td>
-                                <td>Factura de venta</td>
-                            </tr>
-                            <tr>
-                                <td>Cierre del ciclo</td>
-                                <td>Pago al proveedor</td>
-                                <td>Cobro al cliente</td>
-                            </tr>
-                            <tr>
-                                <td>Objetivo final</td>
-                                <td>Obtener insumos/servicios para operar</td>
-                                <td>Obtener ingresos por la venta</td>
-                            </tr>
-                            <tr>
-                                <td>Control interno</td>
-                                <td>Autorización de compra y pago</td>
-                                <td>Aprobación de crédito y seguimiento de cobro</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        `;
     }
 
 
+    function mostrar_pasos_venta() {
+        let venta = document.getElementById("venta");
+        venta.classList.toggle("d-none");
+    }
 
+    function mostrar_cuadro_comparativo() {
+        let cuadro = document.getElementById("cuadro_comparativo");
+        cuadro.classList.toggle("d-none");
+    }
 
 
 
